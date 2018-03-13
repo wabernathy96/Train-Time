@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Time</title>
+
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron bg-light text-center">
+        <h1><strong>TRAIN TIME MUFK</strong></h1>
+    </div>
+    <div class="container">
+        <div class="row"></div>
+            <div class="col-md-12 bg-light">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 bg-light">
+                <form>
+                    <div class="form-group">
+                        <label for="TrainName">Train Name</label>
+                        <input type="input" class="form-control" id="train-name" aria-describedby="newTrainName" placeholder="Train Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="TrainDestination">Train Destination</label>
+                        <input type="input" class="form-control" id="train-dest" aria-describedby="newTrainDest" placeholder="Train Destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="TrainTime">Train Time(HH:mm - Military Time)</label>
+                        <input type="input" class="form-control" id="train-time" aria-describedby="newTrainTime" placeholder="Train Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="TrainFrequency">Frequency (min)</label>
+                        <input type="input" class="form-control" id="train-freq" aria-describedby="newTrainFreq" placeholder="Train Frequency"> 
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="trainsubmit">Add Train</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="./logic.js"></script>
+</body>
+</html>
