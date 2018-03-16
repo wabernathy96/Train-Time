@@ -13,12 +13,24 @@
 </head>
 <body>
     <div class="jumbotron bg-light text-center">
-        <h1><strong>TRAIN TIME MUFK</strong></h1>
+        <h1><strong>TRAIN TIME</strong></h1>
     </div>
     <div class="container">
         <div class="row"></div>
             <div class="col-md-12 bg-light">
-
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="row">
@@ -33,14 +45,14 @@
                         <input type="input" class="form-control" id="train-dest" aria-describedby="newTrainDest" placeholder="Train Destination">
                     </div>
                     <div class="form-group">
-                        <label for="TrainTime">Train Time(HH:mm - Military Time)</label>
+                        <label for="TrainTime">Train Time (HH:mm - Military Time)</label>
                         <input type="input" class="form-control" id="train-time" aria-describedby="newTrainTime" placeholder="Train Time">
                     </div>
                     <div class="form-group">
                         <label for="TrainFrequency">Frequency (min)</label>
                         <input type="input" class="form-control" id="train-freq" aria-describedby="newTrainFreq" placeholder="Train Frequency"> 
                     </div>
-                    <button type="submit" class="btn btn-primary" id="trainsubmit">Add Train</button>
+                    <button type="submit" class="btn btn-primary" id="train-submit">Add Train</button>
                 </form>
             </div>
         </div>
@@ -50,7 +62,20 @@
 
 
 
-
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBE5vr5bRzea5YJRgNwOoWAlh3TJjIwQfo",
+    authDomain: "countdown-button-99b22.firebaseapp.com",
+    databaseURL: "https://countdown-button-99b22.firebaseio.com",
+    projectId: "countdown-button-99b22",
+    storageBucket: "countdown-button-99b22.appspot.com",
+    messagingSenderId: "590021883548"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
